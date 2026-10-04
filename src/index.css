@@ -1,0 +1,319 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ *
+ * RoadGuard AI — iOS-inspired design system
+ * Liquid glass, dark spatial surfaces, SF-style typography.
+ * ------------------------------------------------------------------ */
+
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI',
+    Roboto, 'Helvetica Neue', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --color-ink-950: #05070d;
+  --color-ink-900: #0a0e1a;
+  --color-ink-800: #111726;
+  --color-ink-700: #1b2236;
+  --color-ink-600: #2a3350;
+
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+
+  --color-aurora-400: #4cc9f0;
+  --color-aurora-500: #2ea8e0;
+  --color-aurora-600: #1c7fc4;
+
+  --color-critical: #ff453a;
+  --color-high: #ff9f0a;
+  --color-medium: #ffd60a;
+  --color-low: #30d158;
+  --color-resolved: #8e8e93;
+
+  --radius-ios: 1.375rem;
+
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+:root {
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: #f2f4f8;
+  background: var(--color-ink-950);
+  overscroll-behavior-y: none;
+}
+
+/* Ambient aurora backdrop */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 40rem at 12% -10%, rgba(76, 201, 240, 0.16), transparent 60%),
+    radial-gradient(50rem 40rem at 100% 0%, rgba(140, 90, 255, 0.14), transparent 55%),
+    radial-gradient(60rem 50rem at 50% 120%, rgba(48, 209, 88, 0.1), transparent 60%),
+    linear-gradient(180deg, #070a12 0%, #05070d 100%);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+  }
+
+  .glass-strong {
+    background: rgba(18, 23, 38, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(36px) saturate(200%);
+    -webkit-backdrop-filter: blur(36px) saturate(200%);
+  }
+
+  /*
+   * Cards keep the lighter `.glass` material (nested backdrop-filter is costly
+   * on mobile) but gain the same lensed rim as the liquid surfaces, so every
+   * panel in the product reads as one material system.
+   */
+  .glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.42) 0%,
+      rgba(255, 255, 255, 0.05) 30%,
+      rgba(255, 255, 255, 0) 56%,
+      rgba(255, 255, 255, 0.18) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+  }
+
+  /* Specular sheen used on liquid-glass surfaces */
+  .sheen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.02) 32%,
+      transparent 60%
+    );
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Liquid glass
+   *
+   * A layered approximation of Apple's liquid-glass material:
+   *   1. a refractive gradient body (brighter at the light-facing corner)
+   *   2. a bright 1px inner rim, top-weighted, for the lensed edge
+   *   3. a pointer-tracked specular via --sx / --sy
+   *   4. depth shadow so the surface reads as floating
+   * ---------------------------------------------------------------- */
+  .liquid {
+    position: relative;
+    isolation: isolate;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.045) 34%,
+        rgba(255, 255, 255, 0.02) 60%,
+        rgba(255, 255, 255, 0.09) 100%
+      ),
+      linear-gradient(180deg, rgba(12, 16, 28, 0.55), rgba(8, 11, 20, 0.42));
+    backdrop-filter: blur(28px) saturate(180%) brightness(1.06);
+    -webkit-backdrop-filter: blur(28px) saturate(180%) brightness(1.06);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.06),
+      inset 1px 0 0 0 rgba(255, 255, 255, 0.09),
+      inset -1px 0 0 0 rgba(255, 255, 255, 0.09),
+      0 24px 70px -28px rgba(0, 0, 0, 0.9);
+  }
+
+  /* Lensed edge: a gradient rim drawn with a mask-composited border. */
+  .liquid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.08) 26%,
+      rgba(255, 255, 255, 0) 52%,
+      rgba(255, 255, 255, 0.26) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  /* Specular highlight that follows the pointer across the surface. */
+  .liquid::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 320ms var(--ease-ios);
+    background: radial-gradient(
+      240px circle at var(--sx, 50%) var(--sy, 0%),
+      rgba(255, 255, 255, 0.17),
+      rgba(255, 255, 255, 0.05) 42%,
+      transparent 68%
+    );
+  }
+
+  .liquid:hover::after,
+  .liquid:focus-within::after {
+    opacity: 1;
+  }
+
+  /* Heavier variant for modal sheets and the sidebar rail. */
+  .liquid-deep {
+    background:
+      linear-gradient(
+        140deg,
+        rgba(255, 255, 255, 0.16) 0%,
+        rgba(255, 255, 255, 0.05) 38%,
+        rgba(255, 255, 255, 0.02) 66%,
+        rgba(255, 255, 255, 0.1) 100%
+      ),
+      linear-gradient(180deg, rgba(15, 20, 34, 0.82), rgba(9, 12, 22, 0.74));
+    backdrop-filter: blur(44px) saturate(190%) brightness(1.04);
+    -webkit-backdrop-filter: blur(44px) saturate(190%) brightness(1.04);
+  }
+
+  /* Ambient light orbs that drift behind the glass. */
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(72px);
+    opacity: 0.5;
+    pointer-events: none;
+    will-change: transform;
+  }
+}
+
+@keyframes roadguard-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2.5%, 2%, 0) scale(1.07);
+  }
+  100% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+}
+
+@keyframes roadguard-drift-slow {
+  0% {
+    transform: translate3d(1.5%, 1%, 0) scale(1.04);
+  }
+  50% {
+    transform: translate3d(-2%, -2%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(1.5%, 1%, 0) scale(1.04);
+  }
+}
+
+.animate-drift {
+  animation: roadguard-drift 22s ease-in-out infinite;
+}
+
+.animate-drift-slow {
+  animation: roadguard-drift-slow 31s ease-in-out infinite;
+}
+
+/* Reduced motion support (section 38) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-aurora-400);
+  outline-offset: 2px;
+}
+
+/* MapLibre attribution + controls tuned for the dark glass theme */
+.maplibregl-ctrl-attrib {
+  background: rgba(0, 0, 0, 0.4) !important;
+  color: #cdd3e0 !important;
+  font-size: 10px !important;
+}
+
+.maplibregl-ctrl-attrib a {
+  color: #cdd3e0 !important;
+}

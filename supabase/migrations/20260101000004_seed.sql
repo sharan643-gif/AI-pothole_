@@ -1,0 +1,15 @@
+-- =====================================================================
+-- RoadGuard AI — 0004 (no demo data)
+--
+-- This project ships with NO sample incidents. The database starts empty
+-- so every row on the map is a real, user-reported pothole.
+--
+-- Earlier revisions of this migration inserted five `DEMO_SEED` rows. If you
+-- ran one of those revisions, remove the leftover rows with:
+--
+--   delete from public.potholes where notes = 'DEMO_SEED';
+--
+-- (or run supabase/clear-demo-data.sql). This file is intentionally a no-op.
+-- =====================================================================
+
+-- no-op: demo seeding intentionally disabled for real-world deployments.
