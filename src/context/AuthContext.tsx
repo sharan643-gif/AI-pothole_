@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from 'react'
 import { AppError, toAppError } from '@/lib/errors'
+import { SUPABASE_CONFIG_HINT } from '@/lib/config'
 import { supabase } from '@/lib/supabase'
 import type { Profile, UserRole } from '@/types'
 
@@ -42,7 +43,7 @@ const AuthContext = createContext<AuthState | null>(null)
 function requireClient() {
   if (!supabase) {
     throw new AppError('CONFIG_MISSING', {
-      message: 'Supabase is not configured (VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY).',
+      message: SUPABASE_CONFIG_HINT,
     })
   }
   return supabase

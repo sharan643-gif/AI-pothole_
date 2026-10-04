@@ -29,6 +29,14 @@ export const SUPABASE_ANON_KEY = env.VITE_SUPABASE_ANON_KEY?.trim() ?? ''
 
 export const HAS_SUPABASE_CREDENTIALS = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY)
 
+/**
+ * Shown whenever the browser client is unavailable. Vite inlines `VITE_*`
+ * values at build time, so a deployed build that was produced before the host
+ * had these variables set stays unconfigured until it is redeployed.
+ */
+export const SUPABASE_CONFIG_HINT =
+  'Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY as build-time environment variables in your host (e.g. Vercel → Project Settings → Environment Variables), then redeploy.'
+
 /** Map tiles work without a key via the MapLibre demo style. */
 export const MAP_STYLE_URL =
   env.VITE_MAP_STYLE_URL?.trim() ||

@@ -1,21 +1,71 @@
-# RoadGuard AI
+<!--
+  ██████╗  ██████╗  █████╗ ██████╗  ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗     █████╗ ██╗
+  ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗   ██╔══██╗██║
+  ██████╔╝██║   ██║███████║██║  ██║██║  ███╗██║   ██║███████║██████╔╝██║  ██║   ███████║██║
+  ██╔══██╗██║   ██║██╔══██║██║  ██║██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║   ██╔══██║██║
+  ██║  ██║╚██████╔╝██║  ██║██████╔╝╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██╗██║  ██║██║
+  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝
 
-**See the Damage. Measure the Risk. Fix the Road.**
+  RoadGuard AI — See the Damage. Measure the Risk. Fix the Road.
+  Copyright © 2026 Sharan G. All rights reserved. Licensed under the MIT License.
+-->
 
-A full-stack, production-shaped platform for municipal pothole detection, measurement,
-prioritisation and repair management. Citizens scan a road with their phone; the system
-detects the pothole, estimates its geometry with explicit uncertainty, scores severity and
-priority, files a tracked incident, dispatches the nearest available road officer, and
-verifies the repair when it is done.
+<div align="center">
 
-> **Honesty first.** A single smartphone photo cannot yield centimetre-accurate depth.
+<!-- ██████╗  ██████╗  █████╗ ██████╗  ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗     █████╗ ██╗
+     ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗   ██╔══██╗██║
+     ██████╔╝██║   ██║███████║██║  ██║██║  ███╗██║   ██║███████║██████╔╝██║  ██║   ███████║██║
+     ██╔══██╗██║   ██║██╔══██║██║  ██║██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║   ██╔══██║██║
+     ██║  ██║╚██████╔╝██║  ██║██████╔╝╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██╗██║  ██║██║
+     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝ -->
+
+```text
+██████╗  ██████╗  █████╗ ██████╗  ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗     █████╗ ██╗
+██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗   ██╔══██╗██║
+██████╔╝██║   ██║███████║██║  ██║██║  ███╗██║   ██║███████║██████╔╝██║  ██║   ███████║██║
+██╔══██╗██║   ██║██╔══██║██║  ██║██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║   ██╔══██║██║
+██║  ██║╚██████╔╝██║  ██║██████╔╝╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██╗██║  ██║██║
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝
+```
+
+### 🛣️ **See the Damage. Measure the Risk. Fix the Road.**
+
+**A full-stack, production-shaped platform for municipal pothole detection, measurement, prioritisation and repair management.**
+
+Citizens scan a road with their phone · the system detects the pothole · estimates its geometry with explicit uncertainty · scores severity & priority · files a tracked incident · dispatches the nearest officer · verifies the repair.
+
+<br />
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-22d3ee.svg?style=for-the-badge)](./LICENSE)
+[![Author](https://img.shields.io/badge/Author-Sharan%20G-a855f7.svg?style=for-the-badge)](https://github.com/)
+[![React 19](https://img.shields.io/badge/React-19-61dafb.svg?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178c6.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-8-646cff.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Supabase](https://img.shields.io/badge/Supabase-Backend-3ecf8e.svg?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
+[![Gemini](https://img.shields.io/badge/Gemini-AI-4285f4.svg?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06b6d4.svg?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Tests](https://img.shields.io/badge/Tests-56%20passing-22c55e.svg?style=for-the-badge&logo=vitest&logoColor=white)](#testing)
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,supabase,threejs,nodejs" alt="tech stack" />
+</p>
+
+</div>
+
+---
+
+> ### ⚖️ **Honesty first.**
+> A single smartphone photo cannot yield centimetre-accurate depth.
 > RoadGuard never presents a guess as a measurement — every depth value carries a method and a
 > confidence, and the UI labels visual estimates as *approximate*. See
 > [Measurement honesty](#measurement-honesty).
 
 ---
 
-## Table of contents
+## 📖 Table of contents
+
+<details open>
+<summary>Click to expand / collapse</summary>
 
 1. [Project overview](#project-overview)
 2. [Features](#features)
@@ -43,10 +93,16 @@ verifies the repair when it is done.
 24. [Known limitations](#known-limitations)
 25. [Troubleshooting](#troubleshooting)
 26. [Layout & design system](#layout--design-system)
+27. [Tech stack](#tech-stack)
+28. [Contributing](#contributing)
+29. [License](#license)
+30. [Author & copyright](#author--copyright)
+
+</details>
 
 ---
 
-## Project overview
+## 🧭 Project overview
 
 | Layer | Technology |
 | --- | --- |
@@ -64,9 +120,9 @@ Edge Functions. The browser only ever holds the Supabase anon key.
 
 ---
 
-## Features
+## ✨ Features
 
-**Citizen**
+**🧍 Citizen**
 
 - **Live AI detection** — a real-time mode that samples the feed to Gemini a few
   times a second, draws animated bounding boxes over the video with severity,
@@ -80,14 +136,14 @@ Edge Functions. The browser only ever holds the Supabase anon key.
 - Incident filing, live status tracking and notifications
 - Offline capture: reports are queued in IndexedDB and uploaded automatically
 
-**Officer**
+**👮 Officer**
 
 - Availability control (`AVAILABLE` / `BUSY` / `ON_SITE` / `OFFLINE`)
 - Accept → travel → arrive → repair workflow with live status propagation
 - Navigate-to-pothole with distance, ETA and a direction link
 - Before/after photo upload and AI-assisted repair verification
 
-**Administrator**
+**🛠️ Administrator**
 
 - Aggregate statistics computed from live rows (no placeholder figures)
 - Severity, zone, trend, workflow and officer-workload charts
@@ -95,7 +151,7 @@ Edge Functions. The browser only ever holds the Supabase anon key.
 - Critical backlog triage and officer roster management
 - "AI Road Intelligence" insights grounded in real aggregates
 
-**Platform**
+**🌐 Platform**
 
 - Row Level Security on every table, with role-aware policies
 - Realtime updates for incidents, assignments and notifications
@@ -105,7 +161,7 @@ Edge Functions. The browser only ever holds the Supabase anon key.
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 React (browser)
@@ -129,7 +185,7 @@ so nothing on screen can ever be sample data.
 
 ---
 
-## Requirements
+## 📋 Requirements
 
 - Node.js 20+ (developed on Node 24) and npm
 - A Supabase project (free tier is fine)
@@ -138,7 +194,7 @@ so nothing on screen can ever be sample data.
 
 ---
 
-## Installation
+## 🚀 Installation
 
 ```bash
 git clone <your-repo-url> roadguard-ai
@@ -153,7 +209,7 @@ The app is live-only: fill in real Supabase credentials in `.env` before startin
 
 ---
 
-## Supabase setup
+## 🗄️ Supabase setup
 
 1. Create a project at [supabase.com](https://supabase.com).
 2. Copy **Project URL** and the **anon public key** from *Project Settings → API* into `.env`.
@@ -169,7 +225,7 @@ Supabase runtime injects it automatically.
 
 ---
 
-## Database migration
+## 🧱 Database migration
 
 Migrations live in `supabase/migrations` and run in filename order:
 
@@ -205,7 +261,7 @@ If you migrated from an older revision that inserted five sample rows, remove th
 
 ---
 
-## Storage setup
+## 📦 Storage setup
 
 Migration `0003` creates four **private** buckets:
 
@@ -223,7 +279,7 @@ short-lived signed URLs (`useSignedImage`).
 
 ---
 
-## RLS setup
+## 🔐 RLS setup
 
 Every table has RLS enabled. Summary of the policy model:
 
@@ -241,7 +297,7 @@ Helper functions (`current_role_name()`, `is_admin()`, `is_officer()`, `my_offic
 
 ---
 
-## Gemini API setup
+## 🤖 Gemini API setup
 
 1. Create an API key in [Google AI Studio](https://aistudio.google.com/app/apikey).
 2. Store it as an edge-function secret — **never** in `.env`:
@@ -266,7 +322,7 @@ Prompt design (see `supabase/functions/_shared/prompts.ts`):
 
 ---
 
-## Map setup
+## 🗺️ Map setup
 
 The default basemap is the free CARTO dark style, so **no map key is required**.
 
@@ -283,7 +339,7 @@ routing degrades to a straight bearing line plus a distance/ETA estimate, and th
 
 ---
 
-## Environment variables
+## 🔑 Environment variables
 
 ### Client (`.env`)
 
@@ -306,7 +362,7 @@ routing degrades to a straight bearing line plus a distance/ETA estimate, and th
 
 ---
 
-## Edge Function deployment
+## ☁️ Edge Function deployment
 
 ```bash
 supabase functions deploy analyze-pothole
@@ -343,7 +399,7 @@ All responses use a consistent envelope: `{ "ok": true, ... }` or
 
 ---
 
-## Local development
+## 💻 Local development
 
 ```bash
 npm run dev        # Vite dev server on http://localhost:5173
@@ -369,7 +425,7 @@ Then point `VITE_SUPABASE_URL` at the local API URL printed by `supabase start`.
 
 ---
 
-## Production deployment
+## 🚢 Production deployment
 
 1. **Frontend** — build with `npm run build` and deploy `dist/` to any static host
    (Vercel, Netlify, Cloudflare Pages, S3 + CloudFront).
@@ -380,6 +436,37 @@ Then point `VITE_SUPABASE_URL` at the local API URL printed by `supabase start`.
    `additional_redirect_urls` if you deploy the CLI config.
 6. **Verify RLS** by signing in as a citizen and confirming you cannot read another user's
    notifications or modify an officer's record.
+
+### Deploying to Vercel
+
+The repository ships a [`vercel.json`](vercel.json) that sets the build command
+(`npm run build` → `dist/`), long-lived caching for hashed assets, and an SPA rewrite so
+client-side routes (`/reports/123`, `/admin`, …) resolve on a hard refresh instead of 404ing.
+
+**The one step Vercel cannot infer is the environment variables.** Vite inlines every
+`VITE_*` value at build time, so a build produced before the variables existed stays
+unconfigured — signing in then fails with
+*"Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY…"*.
+
+1. In Vercel → **Project → Settings → Environment Variables**, add these for **Production**,
+   **Preview** and **Development**:
+
+   | Variable | Value |
+   | --- | --- |
+   | `VITE_SUPABASE_URL` | `https://<your-ref>.supabase.co` |
+   | `VITE_SUPABASE_ANON_KEY` | the **anon/public** key from Supabase → Project Settings → API |
+
+   Optional: `VITE_MAP_STYLE_URL`, `VITE_MAPBOX_TOKEN`, `VITE_GLOBE_TEXTURE_URL`.
+   Never add `GEMINI_API_KEY` here — it is an Edge Function secret only (a `VITE_` prefix
+   would ship it to every browser).
+2. **Redeploy** (Deployments → ⋯ → Redeploy, or push a commit). Environment variables only
+   take effect on a *new* build; changing them does not rebuild the existing deployment.
+3. In Supabase → **Authentication → URL Configuration**, add your Vercel domain to the
+   **Site URL** and **Redirect URLs** so email confirmation and Google sign-in return to the
+   right origin.
+
+Verify the deployment with `npm run verify:live` locally (it checks the same project the
+browser will talk to).
 
 ### Go-live checklist
 
@@ -402,7 +489,7 @@ SUPABASE_ACCESS_TOKEN=sbp_... npm run deploy:backend
 
 ---
 
-## Account types
+## 👥 Account types
 
 The sign-in and create-account screens offer two segments:
 
@@ -418,7 +505,7 @@ the route guards read the real role from the database and redirect.
 
 ---
 
-## Going live
+## 🟢 Going live
 
 RoadGuard AI is **live-only**. There is no bundled sample dataset, no demo banner and no demo
 sign-in: every incident, officer and notification comes from your Supabase project, and every AI
@@ -435,7 +522,7 @@ a clear configuration error rather than fabricating data.
 
 ---
 
-## Measurement honesty
+## 📏 Measurement honesty
 
 This is the part most systems get wrong, so it is worth stating plainly.
 
@@ -479,7 +566,7 @@ assessment and selecting the recommended action. It is never the authority for g
 
 ---
 
-## Testing
+## ✅ Testing
 
 ```bash
 npm run test        # 56 tests across the engine, validation, UI and shell
@@ -504,7 +591,7 @@ drift. To exercise the functions themselves, run them against the local stack an
 
 ---
 
-## Project structure
+## 🗂️ Project structure
 
 ```
 src/
@@ -541,7 +628,7 @@ supabase/
 
 ---
 
-## Data model
+## 🧬 Data model
 
 | Table | Purpose |
 | --- | --- |
@@ -567,7 +654,7 @@ triage aids, not statutory standards — the UI and API both say so.
 
 ---
 
-## Incident lifecycle
+## 🔄 Incident lifecycle
 
 ```
 DETECTED → REPORTED → ASSIGNED → ACCEPTED → EN_ROUTE → ON_SITE → UNDER_REPAIR → AI_VERIFICATION → RESOLVED
@@ -581,7 +668,7 @@ DETECTED → REPORTED → ASSIGNED → ACCEPTED → EN_ROUTE → ON_SITE → UND
 
 ---
 
-## Security model
+## 🛡️ Security model
 
 - The browser holds only the anon key; RLS is the enforcement boundary.
 - `GEMINI_API_KEY` and `SUPABASE_SERVICE_ROLE_KEY` exist only as edge-function secrets.
@@ -594,7 +681,7 @@ DETECTED → REPORTED → ASSIGNED → ACCEPTED → EN_ROUTE → ON_SITE → UND
 
 ---
 
-## Known limitations
+## ⚠️ Known limitations
 
 Stated plainly rather than hidden:
 
@@ -613,7 +700,7 @@ Stated plainly rather than hidden:
 
 ---
 
-## Troubleshooting
+## 🧰 Troubleshooting
 
 **"This deployment is running without Supabase credentials"**
 `.env` is missing or unread. Copy `.env.example`, fill in `VITE_SUPABASE_URL` and
@@ -660,7 +747,7 @@ functioning backend, and every uncertainty is displayed rather than smoothed ove
 
 ---
 
-## Layout & design system
+## 🎨 Layout & design system
 
 The interface is one design language rendered for two form factors. There is no phone
 mock-up on desktop — a desktop gets a real desktop layout.
@@ -701,3 +788,121 @@ Ambient light orbs drift behind the glass (`AmbientBackdrop`). They are `aria-hi
 - `aria-current="page"` tracks the active section in both presentations.
 - All decorative layers are `aria-hidden`; every interactive element is a real `button` or `a`.
 - `prefers-reduced-motion` collapses animations and transitions globally.
+
+---
+
+## 🧩 Tech stack
+
+| Category | Packages |
+| --- | --- |
+| **Framework** | `react@19`, `react-dom@19`, `react-router-dom@7` |
+| **Language** | `typescript@6` |
+| **Build** | `vite@8`, `@vitejs/plugin-react` |
+| **Styling** | `tailwindcss@4`, `@tailwindcss/vite`, `tailwind-merge`, `clsx` |
+| **Motion** | `framer-motion` |
+| **Icons** | `lucide-react` |
+| **3D / Globe** | `three`, `@react-three/fiber`, `@react-three/drei` |
+| **Maps** | `maplibre-gl`, `leaflet` |
+| **Charts** | `recharts` |
+| **Data / Backend** | `@supabase/supabase-js` |
+| **Validation** | `zod` |
+| **Offline** | `idb` (IndexedDB) |
+| **Utilities** | `date-fns` |
+| **Testing** | `vitest`, `@testing-library/react`, `@testing-library/jest-dom`, `jsdom` |
+| **Lint** | `oxlint` |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome and appreciated.
+
+1. Fork the repository and create a feature branch: `git checkout -b feature/amazing-thing`.
+2. Follow the existing conventions — TypeScript strict, Zod validation at boundaries, honest
+   measurement labelling.
+3. Make sure the checks pass before opening a pull request:
+
+   ```bash
+   npm run typecheck
+   npm run lint
+   npm run test
+   npm run build
+   ```
+
+4. Open a pull request describing **why** the change matters, not just what it does.
+
+Please keep the guiding principle intact: **never present an estimate as a measurement.**
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for the
+full text.
+
+```
+MIT License
+
+Copyright (c) 2026 Sharan G
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 👤 Author & copyright
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center">
+
+**Sharan G**
+
+*Creator, architect & maintainer*
+
+</td>
+</tr>
+</table>
+
+**© 2026 Sharan G — All rights reserved.**
+
+Released under the [MIT License](#license).
+
+<sub>Built with ❤️, TypeScript, and an insistence on honesty about uncertainty.</sub>
+
+</div>
+
+---
+
+<div align="center">
+
+```text
+   ┌───────────────────────────────────────────────────────────┐
+   │   RoadGuard AI  ·  See the Damage. Measure the Risk.      │
+   │   Fix the Road.                                v1.0.0     │
+   └───────────────────────────────────────────────────────────┘
+```
+
+**⭐ If RoadGuard AI is useful to you, consider starring the repository.**
+
+<sub>© 2026 Sharan G · MIT Licensed</sub>
+
+</div>

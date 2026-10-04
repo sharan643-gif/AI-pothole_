@@ -1,5 +1,10 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
-import { HAS_SUPABASE_CREDENTIALS, SUPABASE_ANON_KEY, SUPABASE_URL } from '@/lib/config'
+import {
+  HAS_SUPABASE_CREDENTIALS,
+  SUPABASE_ANON_KEY,
+  SUPABASE_CONFIG_HINT,
+  SUPABASE_URL,
+} from '@/lib/config'
 import { AppError } from '@/lib/errors'
 
 /**
@@ -26,7 +31,7 @@ export function isSupabaseReady(): boolean {
 export function requireSupabase(): SupabaseClient {
   if (!supabase) {
     throw new AppError('CONFIG_MISSING', {
-      message: 'Supabase is not configured (VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY).',
+      message: SUPABASE_CONFIG_HINT,
     })
   }
   return supabase
